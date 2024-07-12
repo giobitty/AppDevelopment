@@ -1,0 +1,129 @@
+*{box-sizing: border-box;}
+.title{margin-top: 30%; text-align: center; color: magenta;}
+/* SHAPES */
+.shapeContainer{
+    width: 500px;
+    margin: 20px auto;
+    background-color: azure;
+    padding: 20px;
+    text-align: center;
+}
+.shapeDiv{
+    width: 200px;
+    color: purple !important;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+.square{
+    width: 200px;
+    background-color: olive;
+}
+.rectangle{
+    width: 400px;
+    background-color: blueviolet;
+}
+.circle{
+    width: 200px;
+    border-radius: 50%;
+    background-color: crimson;
+}
+.square,.rectangle,.circle,.shapeDiv{
+    height: 200px;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+}
+
+/* header */
+.header-container,.navMenu{
+    background-color: rgba(128, 0, 128, 0.839);
+    color: white;
+    display: flex;
+    width: 100%;
+}
+.header-container > div{
+    padding: 20px;
+}
+.header-container > div:nth-child(1){
+    margin-left: auto;
+}
+.header-container > div, .navMenu >div{
+    padding: 20px;
+}
+/* Navbar stuck to the top even on scrolling */
+.headerNav{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+}
+.navMenu{
+    display: none;
+}
+.navMenu > div:nth-child(2){
+    margin-left: auto;
+    cursor: pointer;
+}
+.collapsemenu{
+    background-color: rgba(151, 162, 192, 0.63);
+    display: none;
+    padding: 20px;
+}
+.collapsemenu>div{
+    padding: 18px 0px;
+    color: white;
+}
+.collapsemenu>div:hover{
+font-size: 1.5rem;    
+cursor: pointer;
+}
+.openToClose{
+    display: block;
+}
+@media screen and (max-width:800px){
+    .header-container{
+        display: none;
+
+    }
+    .navMenu{
+        display: flex;
+    }
+}
+
+/* MODAL WINDOW */
+img{
+    width: 100%;
+    display: block;
+}
+.card{
+    margin-left: 20px;
+    pad: 18px;
+    width: 200px;
+    border: solid grey 2px;
+    cursor: pointer;
+}
+.card:hover{
+    border: magenta 2px dashed;
+    transform: scale(1.1);
+}
+.modalwindow{
+    background-color:rgba(63, 62, 62, 0.422);
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none;
+}
+.modalcontent{
+    width: 40%;
+    margin: 20% auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.closemodal{
+    cursor: pointer;
+}
