@@ -1,0 +1,28 @@
+*{box-sizing: border-box;}
+html{
+    scroll-behavior: smooth;
+}
+body{}
+.header{
+    display: grid;
+    grid-template-columns: 40% 65%;
+}
+.header >h3{
+    padding: 10px;
+}
+/* List */
+/* ul{border: 1px solid orange;
+width: 80%;} */
+li{
+    list-style: none;
+    height: 20px;
+    margin: 12px;
+    padding: 18px;
+}
+a{
+    cursor: pointer;
+    text-decoration: dotted;
+    background-color: rgba(255, 99, 71, 0.662);
+    padding: 10px;
+    border-radius: 12px;
+}
