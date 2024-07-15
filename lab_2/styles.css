@@ -1,0 +1,110 @@
+/* standard decorations */
+*{box-sizing: border-box;}
+html{scroll-behavior: smooth;}
+/* grill system */
+img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+/*  the grid-container will have to set the display to grid */
+.grid-container{
+    display: grid;
+    /* now lets see how many rows and colm, if we want one row we dont have to specify anything */
+    grid-template-columns: auto auto auto;
+    width: 1200px;
+    margin: 20px auto;
+    background-color: rgb(220, 200, 210);
+    box-shadow: 1px 1px 1px gray;
+}
+.img-container{
+    margin: 10px;
+}
+/* Media query */
+@media screen and (max-width:1200px) {
+    .grid-container{
+        width: 800px;
+        background-color: rgb(177, 86, 86);
+        grid-template-columns: auto auto;
+    }
+}
+/* breakpoint for medium screen */
+@media screen and (max-width: 900px){
+    .grid-container{
+        width: 80%;
+        background-color: rgb(183, 178, 80);
+        grid-template-columns: auto;
+    }
+}
+/* Main container */
+.header-container{
+    background-color: rgb(180, 78, 78);
+    color: white;
+    display: flex;
+}
+/* this means all the div child of the header-container */
+.header-container > div{
+    /* border: solid red 1px; */
+    padding: 20px;
+}
+/* selecting the third child */
+.header-container > div:nth-child(3){
+    margin-left: auto;
+}
+
+/* Middle container with the grid display 30% 60% 20% */
+.intro-container{
+    margin-top: 10px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+}
+.nav-menu{
+    background-color: pink;
+}
+.content{
+    background-color: rgb(175, 227, 210);
+}
+.blog{
+    background-color: violet;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+    background-color: rgb(179, 135, 221);
+    color: white;
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* Media query */
+@media screen and (max-width:900px) {
+    .content{
+        background-color: tomato;
+        grid-column: span 2;
+    }
+    .blog{
+        background-color: wheat;
+        grid-column: span 3;
+    }
+    .nav-menu{
+        background-color: teal;
+    }
+}
+@media screen and (max-width: 600px) {
+    .content{
+        background-color: tomato;
+        grid-column: span 3;
+    }
+    .blog{
+        background-color: wheat;
+        grid-column: span 3;
+    }
+    .nav-menu{
+        background-color: rgb(189, 70, 147);
+        grid-column: span 3;
+
+    }
+}
