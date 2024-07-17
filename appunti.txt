@@ -1,0 +1,6 @@
+React components are either functions or classes that produce the ux 
+Functional Components are js functionsyou created by writing a js function that will have the return with the render of the elements or page
+
+loading an img on react we can use <img src={required{'path to thefile.jpeg}}
+OR we can use it with the 
+import img from 'path/to/the/img'

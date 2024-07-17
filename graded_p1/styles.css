@@ -1,2 +1,45 @@
 *{box-sizing: border-box;}
 html{scroll-behavior: smooth;}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    list-style: 
+    none;
+    display: inline;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.selections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.selections div {
+    background-color: #add8e6; /* Light blue */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .selections {
+        flex-direction: column;
+    }
+}
+
+/* img for the exercises */
+img{
+  border: ridge magenta 20px;
+  border-radius: 20%;
+}
