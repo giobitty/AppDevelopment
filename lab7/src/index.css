@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.title{text-align: center;}
+
+
+/* exe2 */
+.slicecontainer{
+  width: 60%;
+  margin: auto;
+  box-shadow: 1px 1px 5px gray;
+  padding: 20px;
+}
+.slicewrapper{
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.slicewrapper>div{
+  height: 35px;
+  width: 50px;
+  border: solid 1px gray;
+  text-align: center;
+  border-radius: 50%;
+  margin: 30px;
+  padding-top: 15px;
+}
+/* buttons e messages */
+.displaymsg{
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+.groupbtn{
+  display: flex;
+  justify-content: center;
+}
+.prev_btn, .next_btn{
+  margin: 20px 50px;
+  padding: 10px 30px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+.prev_btn:hover, .next_btn:hover{
+  background-color: darkblue;
+  font-weight: bolder;
+  box-shadow: 0px 0px 0px 3px 1px grey;
+}
+.active{
+  background-color: red;
+  box-shadow: 0px 0px 0px 3px 1px grey;
+  color:white;
+  font-weight: bolder;
+}
+/* EXE 3 */
+.intro{
+  padding: 20px;
+}
+.read{
+  background-color: lightcoral;
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  margin-left: 8px;
+}
+.readmore{
+  background-color: beige;
+  padding: 20px;
+  transition: ease-in-out;
+  margin: 0px 22px ;
+}
+/* exe4 */
+
+.signupform{
+  width: 80%;
+  margin: auto;
+}
+.formcontrol{
+  margin-top: 20px;
+}
+.formcontrol label{
+  margin-right: 20px;
+  display: inline-block;
+  width: 100%;
+}
