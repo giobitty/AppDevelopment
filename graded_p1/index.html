@@ -12,99 +12,90 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Exercises</a></li>
                 <li><a href="#">Logout</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="numbers-colors">
-            <h2>Learn Numbers</h2>
+        <section id="numbers">
+            <h1>Learn Numbers</h1>
             <h3>Press on one number at a time:</h3>
             <div class="selections">
-                <div class="card" data-number="Zero">
+                <div class="card" data-number="Zero" data-number-korean="영">
                     <img src="img/zero.jpeg" alt="number zero">
                     <p>Zero</p>
                 </div>
-                <div class="card" data-number="One">
+                <div class="card" data-number="One" data-number-korean="하나">
                     <img src="img/one.webp" alt="number one">
                     <p>One</p>
                 </div>
-                <div class="card" data-number="Two">
+                <div class="card" data-number="Two" data-number-korean="둘">
                     <img src="img/two.png" alt="number two">
                     <p>Two</p>
                 </div>
-                <div class="card" data-number="Three">
+                <div class="card" data-number="Three" data-number-korean="셋">
                     <img src="img/three.png" alt="number three">
                     <p>Three</p>
                 </div>
-                <div class="card" data-number="Four">
+                <div class="card" data-number="Four" data-number-korean="넷">
                     <img src="img/four.png" alt="number four">
                     <p>Four</p>
                 </div>
-                <div class="card" data-number="Five">
+                <div class="card" data-number="Five" data-number-korean="다섯">
                     <img src="img/five.png" alt="number five">
                     <p>Five</p>
                 </div>
-                <div class="card" data-number="Six">
+                <div class="card" data-number="Six" data-number-korean="여섯">
                     <img src="img/six.png" alt="number six">
                     <p>Six</p>
                 </div>
-                <div class="card" data-number="Seven">
+                <div class="card" data-number="Seven" data-number-korean="일곱">
                     <img src="img/seven.png" alt="number seven">
                     <p>Seven</p>
                 </div>
-                <div class="card" data-number="Eight">
+                <div class="card" data-number="Eight" data-number-korean="여덟">
                     <img src="img/eight.png" alt="number eight">
                     <p>Eight</p>
                 </div>
-                <div class="card" data-number="Nine">
+                <div class="card" data-number="Nine" data-number-korean="아홉">
                     <img src="img/nine.png" alt="number nine">
                     <p>Nine</p>
                 </div>
             </div>
         </section>
-        <!-- Modal Structure -->
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span id="close-modal" class="close">&times;</span>
-                <h1 id="number-text">Number</h1>
-                <button id="hear-korean">Hear it in Korean</button>
-            </div>
-        </div>
-        
-        <section id="numbers-colors">
-            <h2>Learn Shapes</h2>
+
+        <section id="shapes">
+            <h1>Learn Shapes</h1>
             <h3>Press on one shape at a time:</h3>
             <div class="selections">
-                <div class="card" data-number="Square">
-                    <img src="img/zero.jpeg" alt="a square">
-                    <p>Zero</p>
+                <div class="card" data-shape="Square" data-shape-korean="정사각형">
+                    <img src="img/square.png" alt="a square">
+                    <p>Square</p>
                 </div>
-                <div class="card" data-number="Triangle">
-                    <img src="img/one.webp" alt="a triangle">
-                    <p>One</p>
+                <div class="card" data-shape="Triangle" data-shape-korean="삼각형">
+                    <img src="img/triangle.png" alt="a triangle">
+                    <p>Triangle</p>
                 </div>
-                <div class="card" data-number="Rectangle">
-                    <img src="img/two.png" alt="a Rectangle">
-                    <p>Two</p>
+                <div class="card" data-shape="Rectangle" data-shape-korean="직사각형">
+                    <img src="img/rectangle.png" alt="a rectangle">
+                    <p>Rectangle</p>
                 </div>
-                <div class="card" data-number="Circle">
-                    <img src="img/three.png" alt="a circle">
-                    <p>Three</p>
+                <div class="card" data-shape="Circle" data-shape-korean="원">
+                    <img src="img/circle.png" alt="a circle">
+                    <p>Circle</p>
                 </div>
-                <div class="card" data-number="Diamond shape">
-                    <img src="img/four.png" alt="a diamond">
-                    <p>Four</p>
+                <div class="card" data-shape="Diamond" data-shape-korean="다이아몬드">
+                    <img src="img/diamond.png" alt="a diamond">
+                    <p>Diamond</p>
                 </div>
-                
             </div>
         </section>
-        <!-- Modal Structure For the shapes-->
+
+        <!-- Single Modal Structure for both Numbers and Shapes -->
         <div id="modal" class="modal">
             <div class="modal-content">
                 <span id="close-modal" class="close">&times;</span>
-                <h1 id="shapes">Number</h1>
+                <h1 id="content-text">Content</h1>
                 <button id="hear-korean">Hear it in Korean</button>
             </div>
         </div>

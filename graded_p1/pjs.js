@@ -1,36 +1,47 @@
-// NUMBERS
-
 document.addEventListener('DOMContentLoaded', function() {
-    // collecting the elements from the page
+    // Collecting the elements from the page
     const cards = document.querySelectorAll('.card');
     const modal = document.getElementById('modal');
-    const numberText = document.getElementById('number-text');
+    const contentText = document.getElementById('content-text');
     const hearKoreanBtn = document.getElementById('hear-korean');
     const closeModal = document.getElementById('close-modal');
 
-    // Speech Rate to
-    const speechRate = 0.4; 
+    // Speech Rate
+    const speechRate = 0.4;
 
     cards.forEach(card => {
         card.addEventListener('click', function() {
             const number = this.getAttribute('data-number');
             const numberKorean = this.getAttribute('data-number-korean');
+            const shape = this.getAttribute('data-shape');
+            const shapeKorean = this.getAttribute('data-shape-korean');
 
-            // Display the modal with the English number
-            numberText.textContent = number;
+            let textContent = '';
+            let koreanContent = '';
+
+            if (number) {
+                textContent = number;
+                koreanContent = numberKorean;
+            } else if (shape) {
+                textContent = shape;
+                koreanContent = shapeKorean;
+            }
+
+            // Display the modal with the English content
+            contentText.textContent = textContent;
             modal.style.display = 'block';
 
-            // Announce the number in English with adjusted rate
-            const englishUtterance = new SpeechSynthesisUtterance(number);
-            englishUtterance.lang = 'en-US'; // English language
-            englishUtterance.rate = speechRate; // Adjust speech rate
+            // Announce the content in English with adjusted rate
+            const englishUtterance = new SpeechSynthesisUtterance(textContent);
+            englishUtterance.lang = 'en-US';
+            englishUtterance.rate = speechRate;
             window.speechSynthesis.speak(englishUtterance);
 
-            // Set up the button to announce the number in Korean with adjusted rate
+            // Set up the button to announce the content in Korean with adjusted rate
             hearKoreanBtn.onclick = function() {
-                const koreanUtterance = new SpeechSynthesisUtterance(numberKorean);
-                koreanUtterance.lang = 'ko-KR'; // Korean language
-                koreanUtterance.rate = speechRate; // Adjust speech rate
+                const koreanUtterance = new SpeechSynthesisUtterance(koreanContent);
+                koreanUtterance.lang = 'ko-KR';
+                koreanUtterance.rate = speechRate;
                 window.speechSynthesis.speak(koreanUtterance);
             };
         });
