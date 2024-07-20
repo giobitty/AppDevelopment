@@ -3,32 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1 Giorgia Beavers- Learning App</title>
+    <title>Project 1 Giorgia Beavers - Learning App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>WELCOME TO YOUR <span>LEARNING PLATFORM</span></h1>
         <nav>
             <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Exercises</a></li>
-            <li><a href="">Logout</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Exercises</a></li>
+                <li><a href="#">Logout</a></li>
             </ul>
         </nav>
     </header>
-    <section id="numbers-colors">
-        <h2>Learn Numbers and Colors</h2>
-        <div class="selections">
-            <!-- Placeholder for numbers and colors -->
+    <main>
+        <section id="numbers-colors">
+            <h2>Learn Numbers</h2>
+            <h3>Press on one number at a time:</h3>
+            <div class="selections">
+                <div class="card" data-number="Zero">
+                    <img src="img/zero.jpeg" alt="number zero">
+                    <p>Zero</p>
+                </div>
+                <div class="card" data-number="One">
+                    <img src="img/one.webp" alt="number one">
+                    <p>One</p>
+                </div>
+                <div class="card" data-number="Two">
+                    <img src="img/two.png" alt="number two">
+                    <p>Two</p>
+                </div>
+                <div class="card" data-number="Three">
+                    <img src="img/three.png" alt="number three">
+                    <p>Three</p>
+                </div>
+                <div class="card" data-number="Four">
+                    <img src="img/four.png" alt="number four">
+                    <p>Four</p>
+                </div>
+                <div class="card" data-number="Five">
+                    <img src="img/five.png" alt="number five">
+                    <p>Five</p>
+                </div>
+                <div class="card" data-number="Six">
+                    <img src="img/six.png" alt="number six">
+                    <p>Six</p>
+                </div>
+                <div class="card" data-number="Seven">
+                    <img src="img/seven.png" alt="number seven">
+                    <p>Seven</p>
+                </div>
+                <div class="card" data-number="Eight">
+                    <img src="img/eight.png" alt="number eight">
+                    <p>Eight</p>
+                </div>
+                <div class="card" data-number="Nine">
+                    <img src="img/nine.png" alt="number nine">
+                    <p>Nine</p>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Structure -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h1 id="number-text">Number</h1>
+                <button id="hear-korean">Hear it in Korean</button>
+            </div>
         </div>
-    </section>
-    <section id="language-animals">
-        <h2>Learn a New Language and Animals</h2>
-        <div class="selections">
-            <!-- Placeholder for language and animals -->
+        
+        <section id="numbers-colors">
+            <h2>Learn Shapes</h2>
+            <h3>Press on one shape at a time:</h3>
+            <div class="selections">
+                <div class="card" data-number="Square">
+                    <img src="img/zero.jpeg" alt="a square">
+                    <p>Zero</p>
+                </div>
+                <div class="card" data-number="Triangle">
+                    <img src="img/one.webp" alt="a triangle">
+                    <p>One</p>
+                </div>
+                <div class="card" data-number="Rectangle">
+                    <img src="img/two.png" alt="a Rectangle">
+                    <p>Two</p>
+                </div>
+                <div class="card" data-number="Circle">
+                    <img src="img/three.png" alt="a circle">
+                    <p>Three</p>
+                </div>
+                <div class="card" data-number="Diamond shape">
+                    <img src="img/four.png" alt="a diamond">
+                    <p>Four</p>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Modal Structure For the shapes-->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h1 id="shapes">Number</h1>
+                <button id="hear-korean">Hear it in Korean</button>
+            </div>
         </div>
-    </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Giorgia Beavers - Learning App</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
     <script src="pjs.js"></script>
-
 </body>
 </html>
