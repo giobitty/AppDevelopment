@@ -14,8 +14,8 @@ function App() {
   const [counter, setCounter] = useState(1);
   // set state for -exe 3
   const [isOpen, setIsopen] = useState(false)
+  
   // set the state for the form, collect name - exe 4 we start with an empty state, like this we can collect any type of data instead of just one type
-
   const [inputdata,setInputdata]=useState({})
   // console.log to test the app and see if its reading the change of value!!
   // console.log(name)
