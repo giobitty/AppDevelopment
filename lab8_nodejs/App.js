@@ -67,3 +67,5 @@ fs.open('newFile.txt','w',function(e){
 })
 console.log("------ Example 11: create a directory in nodejs -------")
 fs.mkdirSync('new_img')
+console.log("------ Example 12: remove a directory in nodejs -------")
+fs.rmdirSync('new_directory')
