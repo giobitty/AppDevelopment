@@ -42,3 +42,28 @@ fs.readFile('readmore.txt', 'utf-8', function(error,data){
     console.log(`Error = ${error}`)
 
 })
+console.log("------ Example 7: write file in nodejs -------")
+let info = "This file contains three names : \n1. Peter\n2. Diana\n3. Json"
+fs.writeFile('readmore.txt',info,function(error){
+    if(error){
+        console.log(error)
+    }
+})
+console.log("------ Example 8: append data into an existing file in nodejs -------")
+fs.appendFile("user_emails.txt", info, function(error){
+    if(error){
+        console.log(error)
+    }
+})
+console.log("------ Example 9: remove an existing file in nodejs -------")
+fs.unlink('user_email.txt', function(error){
+    if(error){
+        console.warn(error)
+    }
+})
+console.log("------ Example 10: create a file in nodejs: .writeFile(), .append(), .open()-------")
+fs.open('newFile.txt','w',function(e){
+    if(e){console.log(e)}else(console.log('File saved'))
+})
+console.log("------ Example 11: create a directory in nodejs -------")
+fs.mkdirSync('new_img')
