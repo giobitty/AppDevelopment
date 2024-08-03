@@ -1,12 +1,19 @@
-//import mongose
-const { beforeEach } = require('mocha')
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server'); // For in-memory MongoDB
 
-mongoose.connect("mongodb://localhost/students_list")
+let mongoServer;
 
-//check if it is connected
-mongoose.connection
-    .once('open', function(){console.log('-----Connected to mongoDB----')})
-    .on('error', function(e){
-        
-    })
+module.exports = {
+    connect: async () => {
+        mongoServer = await MongoMemoryServer.create();
+        const mongoUri = mongoServer.getUri();
+        await mongoose.connect(mongoUri, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+    },
+    disconnect: async () => {
+        await mongoose.disconnect();
+        await mongoServer.stop();
+    }
+};

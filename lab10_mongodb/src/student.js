@@ -1,11 +1,13 @@
-const mongoose= required("mongoose")
-const Schema = mongose.Schema
+const mongoose = require('mongoose'); 
+const Schema = mongoose.Schema; 
 
-//config the schema
-const StudentSchema = new Schema({name:String})
+// Configure the schema
+const StudentSchema = new Schema({
+    name: String
+});
 
-//Schema for each student
-const Student = mongoose.model('student', StudentSchema)
+// Schema for each student
+const Student = mongoose.model('Student', StudentSchema);
 
-//export the schema
-module.exports = Student
+// Export the schema
+module.exports = Student;

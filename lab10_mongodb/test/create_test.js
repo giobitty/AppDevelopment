@@ -1,15 +1,34 @@
-//import assert. assert is used to compare two boolean
-const assert = require("assert"
-)
-//import student schema
-const Student = require('../src/student')
+const assert = require('assert');
+const mongoose = require('mongoose');
+const { MongoMemoryServer } = require('mongodb-memory-server');
+const Student = require('../src/student'); // Adjust the path as needed
 
-//describe function to push testing through Mocha
-describe('Create the first data', function(){
-    isTypedArray('Saved the student', function(){
-        //create new student
-        const student1 = new Student({name:'Peter'})
-        //read and save
-        student1.save()
-    })
-})
+let mongoServer;
+let connection;
+let studentId;
+
+before(async () => {
+    mongoServer = await MongoMemoryServer.create();
+    const mongoUri = mongoServer.getUri();
+    connection = await mongoose.connect(mongoUri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+});
+
+after(async () => {
+    await connection.disconnect();
+    await mongoServer.stop();
+});
+
+describe('Create Operation', function() {
+    it('should create and save a new student', async function() {
+        const student = new Student({ name: 'Peter' });
+        const savedStudent = await student.save();
+        
+        studentId = savedStudent._id; // Store the student ID for later use in delete test
+
+        assert.ok(savedStudent._id, 'Student does not have an ID');
+        assert.strictEqual(savedStudent.name, 'Peter', 'Student name is incorrect');
+    });
+});
