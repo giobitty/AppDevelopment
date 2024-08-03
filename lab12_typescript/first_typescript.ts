@@ -1,5 +1,5 @@
-
-
+// EXE 1
+// EXE 2
 // ---- EXE 3
 console.log("------ Exemple 3 : unknown type-----")
 //unknown similar to 'any'
