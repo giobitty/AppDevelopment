@@ -1,7 +1,31 @@
-// EXE 1
-// EXE 2
+// EXE1 explicit type
+console.log("------ Example 1 : explicit type-----")
+
+function greeter(username:string){
+    console.log(`Welcome to Typescript ${username}`)
+}
+let user = "Giorgia"
+greeter(user)
+// EXE 2 implicit type
+let y:12
+console.log(y)
+
+// explicit array (list)
+let colors:string[]= ['red', 'white', 'blue']
+console.log(colors)
+//implicit array
+let numbers = [3,9,-1]
+console.log(numbers)
+
+console.log("------ Example 32 : any type-----")
+let a:anya=5
+console.log('a=5',typeof(a))
+a='Peter Pan'
+console.log('a=Peter Pan',typeof(a))
+a = false
+console.log('a=false', typeof(a))
 // ---- EXE 3
-console.log("------ Exemple 3 : unknown type-----")
+console.log("------ Example 3 : implicit type-----")
 //unknown similar to 'any'
 let b:unknown
 b = 10
@@ -11,7 +35,7 @@ console.log("b = Martha", typeof(b))
 b = true
 console.log("b = true", typeof(b))
 // EXE 4
-console.log("------ Exemple 4 : enum type -----")
+console.log("------ Example 4 : enum type -----")
 enum Countries {USA, Canada, Mexico}
 let USA = Countries.USA
 let Canada = Countries.Canada
@@ -21,7 +45,7 @@ console.log(`Class object of Canada ${Canada}`)
 console.log(`Class object of Mexico ${Mexico}`)
 console.log(`Class object of USA ${USA}`)
 // EXE 5
-console.log("------ Exemple 5 : data type classes -----")
+console.log("------ Example 5 : data type classes -----")
 // can use the property link, if data type is explicit ( :string)
 let username:string = "Ann Smith"
 let character_username = username.length
@@ -31,12 +55,12 @@ let firstname = 'Mario'
 let character_firstname = firstname.length
 console.log(`User first name ${firstname} has ${character_firstname} characters`)
 
-console.log("------ Exemple 6 : return type function -----")
+console.log("------ Example 6 : return type function -----")
 function get_time():number{
     return new Date().getHours()
 }
 console.log(`The time is ${get_time()}h `)
-console.log("------ Exemple 7 : void functions -----")
+console.log("------ Example 7 : void functions -----")
 function greeting():void{
     console.log('Welcome to Angular data type!')
 }
@@ -49,7 +73,7 @@ function  get_sum(num1:number,num2:number, name:string){
 }
 console.log(get_sum(2,3,"Peter"))
 
-console.log("------ Exemple 9 : optional parameters -----");
+console.log("------ Example 9 : optional parameters -----");
 function sum_total(n1: number, n2?: number): number {
     if (n2 !== undefined) {
         return n1 + n2;
@@ -62,7 +86,7 @@ console.log(`The sum is ${sum_total(5)}`);
 
 console.log(`The sum is ${sum_total(5,9)}`)
 // console.log(`The sum is ${sum_total(5)}`)
-console.log("------ Exemple 10 : spread syntax -----");
+console.log("------ Example 10 : spread syntax -----");
 function get_average(...n: number[]): number {
     let total = 0;
     let count = n.length;
@@ -75,7 +99,7 @@ function get_average(...n: number[]): number {
 }
 console.log(`The average is ${get_average(10, 6, 2)}`);
 // EXE 11 CLASS AND METHODS
-console.log("------ Exemple 11 : Class -----");
+console.log("------ Example 11 : Class -----");
 class Car{
     // define data
     brand:string
