@@ -18,7 +18,8 @@ let numbers = [3,9,-1]
 console.log(numbers)
 
 console.log("------ Example 32 : any type-----")
-let a:anya=5
+let a:any 
+a=5
 console.log('a=5',typeof(a))
 a='Peter Pan'
 console.log('a=Peter Pan',typeof(a))
