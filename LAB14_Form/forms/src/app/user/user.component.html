@@ -1,0 +1,19 @@
+<section class="container">
+    <div action="" class="form">
+        <!-- username -->
+        <div class="formcontrol">
+            <label for="username">Username: </label>
+            <input type="text" id="username" placeholder="Type username.." [(ngModel)]="newuser.name" name="userName" #name = 'ngModel' (change)="displaylog(name)">
+        </div>
+        <div class="formcontrol">
+            <label for="email">Email address: </label>
+            <input type="email" name="email" id="email" [(ngModl)]="newuser.email" placeholder="Type your email...">
+        </div>
+        <div class="formcontrol">
+            <button type="submit" class="btn"></button>
+        </div>
+        <div class="json_display">
+            <p>Result</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+.btn{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: purple;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.json_display{
+    margin-top: 50px;
+}
+.ng-touched{
+    border: green solid 2pxx;
+}

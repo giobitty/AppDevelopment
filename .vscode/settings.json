@@ -1,6 +1,9 @@
 {
     "livePreview.defaultPreviewPath": "/lab_3/index.html",
     "cSpell.words": [
-        "contactus"
+        "contactus",
+        "Datasource",
+        "getuser",
+        "newuser"
     ]
 }
