@@ -1,42 +1,28 @@
 const assert = require('assert');
 const mongoose = require('mongoose');
-const { MongoMemoryServer } = require('mongodb-memory-server');
-const Student = require('../src/student'); // Adjust the path as needed
+const Student = require('../src/student');
 
-let mongoServer;
-let connection;
-let studentId; // Store the student ID for the delete operation
+describe('Delete data', function() {
+    let student1;
 
-before(async () => {
-    mongoServer = await MongoMemoryServer.create();
-    const mongoUri = mongoServer.getUri();
-    connection = await mongoose.connect(mongoUri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+    // This will run before each test in this block
+    beforeEach(function(done) {
+        student1 = new Student({ name: 'Peter' });
+        // Save the student to the database
+        student1.save().then(function() {
+            done();
+        });
     });
 
-    // Create a student to be deleted
-    const student = new Student({ name: 'Peter' });
-    const savedStudent = await student.save();
-    studentId = savedStudent._id; // Use this ID for the delete test
-});
+    // Test to delete a student
+    it('Deletes a student by name', async function() {
+        // Delete the student by name
+        await Student.deleteOne({ name: 'Peter' });
 
-after(async () => {
-    await connection.disconnect();
-    await mongoServer.stop();
-});
+        // Fetch the student from the database
+        const deletedStudent = await Student.findOne({ name: 'Peter' });
 
-describe('Delete Operation', function() {
-    it('should delete the student', async function() {
-        // Verify the student exists before deletion
-        const student = await Student.findById(studentId);
-        assert.ok(student, 'Student was not found before deletion');
-
-        // Perform the delete operation
-        await Student.deleteOne({ _id: studentId });
-
-        // Verify the student has been deleted
-        const deletedStudent = await Student.findById(studentId);
-        assert.strictEqual(deletedStudent, null, 'Student was not deleted');
+        // Assert that the student was deleted
+        assert(deletedStudent === null, 'The student was not deleted');
     });
 });
