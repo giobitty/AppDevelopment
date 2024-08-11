@@ -1,1 +1,36 @@
-<p>book works!</p>
+<h1>Book Shopping</h1>
+<!-- using ngClass -->
+ <p *ngIf="model.getBooks().length>0">
+    There are {{model.getBooks().length}} books in stock
+ </p>
+ <h2>Hidden properties</h2>
+ <p [hidden]="model.getBooks().length<=0">
+    There are {{model.getBooks().length}} books in stock
+ </p>
+ <p [hidden]="model.getBooks().length>0">
+There are no books in stock </p>
+<div [ngSwitch]="model.getBooks().length">
+    <span *ngSwitchCase="0">Sorry, the book is out of stock</span>
+    <span *ngSwitchCase="1">Hurry!There is only one book left in stock</span>
+    <span *ngSwitchDefault>Great! All our books are in stock!</span>
+</div>
+
+<!-- Table with all the books in stock -->
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Price</th>
+            
+        </tr>
+        
+            <tr *ngFor="let book of books">
+                <td>{{ book.name }}</td>
+                <td>{{ book.author }}</td>
+                <td>$ {{ book.price }}</td>
+                <button>Buy</button>
+            </tr>
+        
+    </table>
+</div>
