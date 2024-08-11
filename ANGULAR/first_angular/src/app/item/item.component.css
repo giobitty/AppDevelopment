@@ -1,0 +1,20 @@
+.component_title{
+    background-color: aquamarine;
+}
+.btncart, .btnoutOfStock{
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+.btncart:disabled, .btnoutOfStock:disabled{
+    background-color: white;
+    cursor: none;
+    color: black;
+
+}
+span{
+    margin: 10px;
+    padding: 20px;
+    color: red;
+    font-weight: bolder;
+}
