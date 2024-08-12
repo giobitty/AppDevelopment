@@ -1,0 +1,42 @@
+*{box-sizing: border-box;}
+.container{
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border: solid gray 2px;
+    border-radius: 10px;
+}
+.formtitle{
+    text-align: center;
+    color: darkblue;
+}
+.formcontrol{
+    margin-top: 30px;
+}
+.formcontrol label{
+    display: block;
+    margin-bottom: 5px;
+    color: darkblue;
+}
+.formcontrol input{
+    width: 100%;
+    padding: 10px;
+    border: solid 2px gray;
+    border-radius: 5px;
+}
+.btn{
+    width: 100%;
+    color: white;
+    background-color: darkblue;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: red;
+    cursor: pointer;
+    font-weight: bolder;
+    box-shadow: 0px 0px 0px 2px 1px gray;
+}
+.json_dispay{
+    margin-top: 50px;
+}
