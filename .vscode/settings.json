@@ -1,9 +1,14 @@
 {
     "livePreview.defaultPreviewPath": "/lab_3/index.html",
     "cSpell.words": [
+        "Bookrepository",
         "contactus",
         "Datasource",
         "getuser",
-        "newuser"
+        "itemname",
+        "newuser",
+        "productmsg",
+        "Soldout",
+        "totalqnt"
     ]
 }
