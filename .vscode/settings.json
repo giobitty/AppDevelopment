@@ -1,9 +1,11 @@
 {
     "livePreview.defaultPreviewPath": "/lab_3/index.html",
     "cSpell.words": [
+        "adduser",
         "Bookrepository",
         "contactus",
         "Datasource",
+        "displaylog",
         "getuser",
         "itemname",
         "newuser",

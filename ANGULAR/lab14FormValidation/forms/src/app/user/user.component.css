@@ -25,6 +25,7 @@
     border-radius: 5px;
 }
 .btn{
+    height: 40px;
     width: 100%;
     color: white;
     background-color: darkblue;
@@ -40,3 +41,20 @@
 .json_dispay{
     margin-top: 50px;
 }
+.validMsg{
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.696);
+    color: white;
+}
+
+/* angular classes */
+.ng-touched{
+    border: greenyellow 2px solid;
+}
+.ng-valid{
+    background-color: rgba(47, 218, 47, 0.242);
+}
+.ng-invalid{
+    border: red 2px solid;
+}
+

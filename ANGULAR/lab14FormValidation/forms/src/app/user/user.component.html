@@ -4,17 +4,26 @@
         <!-- username -->
         <div class="formcontrol">
             <label for="username">Username: </label>
-            <input type="text" id="username" placeholder="Type username.." [(ngModel)]="newuser.name" name="userName" #name = 'ngModel' (change)="displaylog(name)">
+            <input type="text" id="username" placeholder="Type username.." [(ngModel)]="newuser.name" name="userName" #name = 'ngModel' (change)="displaylog(name)" required minlength="3" maxlength="20">
+            <!--  #name = 'ngModel' this means e will use the name to access the model -->
+              <!-- error message -->
+              <div class="validMsg" *ngIf="!name.valid && name.touched">
+                <p *ngIf="name.errors?.['required']">Username is required</p>
+                <p *ngIf="name.errors?.['minlength']">Username must be at least 3 characters long</p>
+            </div>
         </div>
+        <!-- email -->
         <div class="formcontrol">
             <label for="email">Email address: </label>
-            <input type="email" name="email" id="email" [(ngModel)]="newuser.email" placeholder="Type your email...">
+            <input type="email" name="email" id="email" [(ngModel)]="newuser.email" placeholder="Type your email..." required>
         </div>
+        <!-- submit button -->
         <div class="formcontrol">
-            <button type="submit" class="btn">Send</button>
+            <button type="submit" class="btn" (click)="adduser(newuser)" >Send</button>
         </div>
         <div class="json_display">
             <p>Result</p>
+            <p>Welcome {{jsonUser}}</p>
         </div>
     </div>
 </section>
