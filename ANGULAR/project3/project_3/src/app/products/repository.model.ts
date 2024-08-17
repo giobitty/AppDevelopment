@@ -16,4 +16,5 @@ export class ProductsRepository {
   getProducts(): Product[] {
     return this.products;
   }
+  
 }

@@ -11,6 +11,7 @@
            
         </div>
     </div>
+
     <!-- the cart will be hidden until the user adds an item -->
     <div class="cart" *ngIf="cart.length > 0">
         <p>Your cart: </p>
@@ -34,11 +35,19 @@
         <h2>{{ selectedProduct.name }}</h2>
         <p>Category: {{ selectedProduct.category }}</p>
         <p>Price: $ {{ selectedProduct.price }}</p>
-        <p>We have a total of {{selectedProduct.quantity}} pieces available</p>
-        <input type="number" [(ngModel)]="quantityToAdd" min="1" [max]="selectedProduct.quantity" placeholder="Enter quantity">
+        <p class="selectedQuantity">We have a total of {{selectedProduct.quantity}} pieces available</p>
+        <input 
+        type="number" 
+        [(ngModel)]="quantityToAdd" 
+        min="1" 
+        placeholder="Enter quantity">        
         <button (click)="addToCart(selectedProduct)">Add to cart</button>
         <p class="qntErr" *ngIf="selectedProduct && quantityToAdd > selectedProduct.quantity">
             UPS.. we don't have enough in our inventory for your order, send us an email for bigger orders
         </p>
+        <!-- Confirmation Message -->
+        <div *ngIf="showConfirmation" class="confirmation-message">
+    {{ confirmationMessage }}
+        </div>
     </div>
 </div>
