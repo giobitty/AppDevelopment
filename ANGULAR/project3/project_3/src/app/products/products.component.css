@@ -1,0 +1,121 @@
+*{box-sizing: border-box;}
+.title_prod_page{
+    text-align: center;
+    font-weight: bolder;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+  }
+.card{
+    /* height: 300px; */
+    border: 2px grey solid;
+    margin: auto;
+    text-align: center;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+.card:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.cardtitle{
+    font-weight: bolder;
+    font-size: larger;
+}
+.pspan{
+    font-weight: bolder;
+}
+
+/* Modal Product */
+.modal {
+    display: block; /* Show the modal */
+    /* Stay in place */
+    position: fixed; 
+    /* Sit on top */
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Max width for the modal content */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+}
+  
+  /* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* IMG */
+.img{
+    width: 50%px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* cart on the side  */
+
+.coContainer {
+    display: flex;
+}
+
+
+  
+.cart {
+    flex: 1; /* Cart takes 1 part, product list takes 3 parts of the container */
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    max-width: 25%; /* Ensure cart does not exceed 25% of the container width */
+    overflow-y: auto; /* Allows scrolling if the cart content is too long */
+}
+  
+.cart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.cart li {
+    margin-bottom: 10px;
+}
+/* Quantity error */
+.qntErr{
+    font-weight: bold;
+    color: red;
+    background-color: black;
+    padding: 15px;
+    border-radius: 5px;
+}
+.qntErr:hover{
+    background-color: red;
+    color: black;
+}

@@ -1,0 +1,44 @@
+<h1 class="title_prod_page">Shop with <span>Us</span></h1>
+
+ <div class="container">
+    <div class="rows">
+         <div class="card" *ngFor="let product of products" (click)="openProductModal(product)">
+            <img [src]="product.img" [alt]="product.name" class="img">
+            <h4 class="cardtitle">{{ product.name }}</h4>
+            <p>Category: {{ product.category }}</p>
+            <p>Price:  <span class="pspan">$ {{ product.price }}</span></p>
+            
+           
+        </div>
+    </div>
+    <!-- the cart will be hidden until the user adds an item -->
+    <div class="cart" *ngIf="cart.length > 0">
+        <p>Your cart: </p>
+        <ul>
+          <li *ngFor="let item of cart">
+            {{ item.name }} - {{ item.quantity }} x ${{ item.price }}
+          </li>
+        </ul>
+    </div>
+</div>
+
+    
+ 
+
+
+<!-- Modal -->
+<div class="modal" *ngIf="selectedProduct">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <img [src]="selectedProduct.img" [alt]="selectedProduct.name" class="img">
+        <h2>{{ selectedProduct.name }}</h2>
+        <p>Category: {{ selectedProduct.category }}</p>
+        <p>Price: $ {{ selectedProduct.price }}</p>
+        <p>We have a total of {{selectedProduct.quantity}} pieces available</p>
+        <input type="number" [(ngModel)]="quantityToAdd" min="1" [max]="selectedProduct.quantity" placeholder="Enter quantity">
+        <button (click)="addToCart(selectedProduct)">Add to cart</button>
+        <p class="qntErr" *ngIf="selectedProduct && quantityToAdd > selectedProduct.quantity">
+            UPS.. we don't have enough in our inventory for your order, send us an email for bigger orders
+        </p>
+    </div>
+</div>
