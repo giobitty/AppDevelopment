@@ -23,4 +23,7 @@ export class Datasource {
   addToCart(p:Product){
     return this.cart.push(p);
   }
+  grandTotal(): number {
+    return this.cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+  }
 }

@@ -16,9 +16,14 @@
     <div class="cart" *ngIf="cart.length > 0">
         <p>Your cart: </p>
         <ul>
-          <li *ngFor="let item of cart">
-            {{ item.name }} - {{ item.quantity }} x ${{ item.price }}
-          </li>
+            <li *ngFor="let item of cart">
+                {{ item.name }} - {{ item.quantity }} x ${{ item.price }}  Total: $ {{item.price * item.quantity}}
+                    
+            </li>
+            <hr>
+            <li>
+               <b> Gran Total : $ {{total()}}</b>
+            </li>
         </ul>
     </div>
 </div>
@@ -47,7 +52,7 @@
         </p>
         <!-- Confirmation Message -->
         <div *ngIf="showConfirmation" class="confirmation-message">
-    {{ confirmationMessage }}
+            {{ confirmationMessage }}
         </div>
     </div>
 </div>

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
+
   //for the modal windows
   selectedProduct: Product | null = null;
 
@@ -53,5 +54,8 @@ export class ProductsComponent {
     this.showConfirmation = true;
     this.confirmationMessage = `${this.quantityToAdd} ${product.name} added to cart.`;
     this.quantityToAdd = 1; // Reset quantity after adding to cart
+  }
+  total(): number {
+    return this.cart.reduce((total, item) => total + (item.price * (item.quantity || 0)), 0);
   }
 }
