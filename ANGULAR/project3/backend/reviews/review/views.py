@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ReviewForm  # Assuming you have a ReviewForm class
-from .models import Review  # Assuming you have a Review model
+from .models import Review 
 
 def submit_review(request):
     if request.method == 'POST':
